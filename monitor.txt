@@ -1,0 +1,11 @@
+[3;J[H[2J[32mInternet: (B[m Connected
+[32mOperating System Type : (B[m GNU/Linux
+[32mOS Name : (B[mCentOS Linux
+cpe:/o:centos:centos:7
+[32mOS Version : (B[m7 (Core)
+7
+7
+[32mArchitecture : (B[m x86_64
+[32mKernel Release : (B[m 3.10.0-327.13.1.el7.x86_64
+[32mHostname : (B[m sidtest
+[32mInternal IP : (B[m 10.50.12.165

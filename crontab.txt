@@ -1,0 +1,11 @@
+#*/1 * * * * /bin/bash /home/himanshu/apache.sh
+#*/1 * * * * /bin/bash /home/himanshu/mysql.sh
+*/1 * * * * /bin/bash /home/himanshu/disk.sh
+10 12 */5 */1 * /bin/bash /home/himanshu/dbdump.sh
+* * * * *  /bin/bash	/home/himanshu/filesystem.sh
+*/2 * * * *  /bin/bash    /home/himanshu/appmanager.sh
+*/2 * * * *  /bin/bash    /home/himanshu/appmanagerping.sh
+10 23 * * *  /bin/bash   /home/himanshu/crontab.sh
+#*/10 1 * * *  /bin/bash   /home/himanshu/ossec.sh
+*/4 * * * *  /bin/bash   /home/himanshu/Appmanagerui.sh
+#* * * * *  /bin/bash /home/himanshu/updateq.sh

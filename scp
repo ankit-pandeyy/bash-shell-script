@@ -1,0 +1,1 @@
+scp -P33000 /var/www/html/Nocdashboard/report.html  payunoc@10.50.22.87:/home/payunoc/

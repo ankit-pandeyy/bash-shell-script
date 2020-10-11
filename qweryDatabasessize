@@ -1,0 +1,5 @@
+ SELECT     table_schema 'Databases',     SUM(data_length + index_length) 'Size in Bytes',     ROUND(SUM(data_length + index_length) / 1024 / 1024, 2) 'Size in MiB' FROM information_schema.tables GROUP BY table_schema;
+
+show  global variables like '%wait%';
+ set session wait_timeout=360;
+set global session wait_timeout=360;

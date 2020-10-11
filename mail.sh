@@ -1,0 +1,1 @@
+echo SUBJECT 1: Table truncated successfully ,SUBJECT 2: it's fine if it's count is zero ,SUBJECT 3: There count should not be zero , SUBJECT 4: Data uploaded successfully on table threshold | nail -s "CAN YOU CHECK THESE ALERT IF NOT PLEASE CHECK THEY HAVE TO BE RECIEVED AT EVERY MORNING 7:01 AM" himanshu.pandey@payu.in

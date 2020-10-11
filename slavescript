@@ -1,0 +1,24 @@
+#######################################################################################################################################
+m5() {
+/usr/local/mariadb/bin/mysql -u payunoc -pnocpayu@123  -e 'show slave "payu" status\G;' | grep  'Seconds_Behind_Master' | awk '{ print $2}'
+}
+delay=$(m5)
+if [ $delay -lt $a ]
+then
+echo "No Delay"
+else
+/usr/local/mariadb/bin/mysql -u payunoc -p'nocpayu@123' -e "select Id,User,Host,db,Command,Time,State,Info,MEMORY_USED from information_schema.processlist where command = 'Query' and db in ('payu') \G"  > /tmp/malik.txt
+#cat /tmp/malik.txt | /usr/bin/nail -s "Their is Replcation Delay of $delay Sec on  10.200.1.13 from PayU  Aurora" linuxpayumonnoc@payu.in,alerting@payu.in
+cat /tmp/malik.txt | /usr/bin/nail -s "Their is Replcation Delay of $delay Sec on  10.200.1.13 from PayU  Aurora" sukhbir.malik@payu.in
+
+fi
+/usr/local/mariadb/bin/mysql -u payunoc -pnocpayu@123  -e 'show slave "hash" status\G;' | grep  'Slave_IO_Running' | awk '{ print $2}'|head -1
+}
+stats=$(f6)
+if [ ${stats} = ${b} ]; then
+echo "Slave_IO is running"
+else
+#echo "kindly check" | nail -s "Slave_IO is not running on  10.200.1.13 from  Crypto Aurora" linuxpayumonnoc@payu.in,alerting@payu.in
+echo "kindly check" | nail -s "Slave_IO is not running on  10.200.1.13 from  Crypto Aurora" sukhbir.malik@payu.in
+fi
+
